@@ -81,10 +81,8 @@ import PlaidLink from './PlaidLink';
           } else if (newUser.error) {
             alert("Ocurrió un error inesperado. Por favor intenta de nuevo.");
           } else {
-            if(newUser)  alert("Usuario registrado exitosamente."); router.push('/');   
+            if(newUser)  alert("Usuario registrado exitosamente."); router.push('/');
           }
-
-         
 
         }
 
@@ -101,7 +99,7 @@ import PlaidLink from './PlaidLink';
           }
         }
       } catch (error) {
-        console.log(error);
+        console.log("ERROR al iniciar sesión: " + error);
       } finally {
         setIsLoading(false);
       }
@@ -146,11 +144,10 @@ import PlaidLink from './PlaidLink';
           </div>
       </header>
       {/* {user ? (
-        <div className="flex flex-col gap-4"> */}
-          {/* PENDIENTE PONERLO EN LA APP */}
-          {/* <PlaidLink user={user} variant="primary" /> */}
-        {/* </div>
-      ): ( */}
+        <div className="flex flex-col gap-4"> 
+         <PlaidLink user={user} /> 
+        </div>
+      ): (  */}
         <>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -207,7 +204,7 @@ import PlaidLink from './PlaidLink';
             </Link>
           </footer>
         </>
-      {/* )} */}
+     {/* )} */}
     </section>
   )
 }
