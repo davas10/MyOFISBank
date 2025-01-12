@@ -287,7 +287,7 @@ declare interface CreateTransactionProps {
   senderBankId: string;
   receiverId: string;
   receiverBankId: string;
-  email: string;
+  //email: string;
 }
 
 declare interface getTransactionsByBankIdProps {
